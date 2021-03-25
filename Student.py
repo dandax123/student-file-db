@@ -20,7 +20,7 @@ class Student(object):
         else:
             return "Female"
     def get_student_age(self):
-        return int(2021-self.get_birth_year())
+        return int(2021-int(self.get_birth_year()))
     def get_birth_year(self):
         return int(self.date_of_birth[6:10])
     def get_date_of_birth(self):

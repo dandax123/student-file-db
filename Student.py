@@ -21,8 +21,6 @@ class Student(object):
             return "Female"
     def get_student_age(self):
         return int(2021-self.get_birth_year())
-    def set_first_name(self, first_name):
-        self.first_name = first_name
     def get_birth_year(self):
         return int(self.date_of_birth[6:10])
     def get_date_of_birth(self):
@@ -37,10 +35,15 @@ class Student(object):
         print("Date Of Birth: \t" + self.get_date_of_birth() + "\n")
         print("Country Of Birth: " + self.get_country_of_birth() + "\n")
         return ''
-        
+    
+    def set_first_name(self, first_name):
+        self.first_name = first_name
+    def set_date_of_birth(self, date_of_birth):
+        self.date_of_birth = date_of_birth
+    def set_country_of_birth(self, country_of_birth):
+        self.country_of_birth = country_of_birth
     def set_last_name(self, last_name):
         self.last_name = last_name
-        
     def set_gender(self, gender):
         self.gender = gender 
 

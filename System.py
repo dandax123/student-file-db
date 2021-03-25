@@ -1,4 +1,5 @@
 from Student import Student
+from Helper import modify_operations
 
 class System:
     def __init__(self, input_file = None):
@@ -22,7 +23,14 @@ class System:
         self.students.pop(is_student_exist)
         print("Student deleted successfully\n\n")
         
-            
+    def modify_student_record(self,student_no, type, new_value):
+        student_index =self.get_student_by_num(student_no)
+        if(student_index == -1):
+            #print not found
+            return -1
+        operation_type = f"set_{type}" 
+        modify_operation = getattr(self.students[student_index], operation_type)
+        modify_operation(new_value)
     def get_student_by_num(self, student_no):
         isFound = -1
         for i in range(0, len(self.students)):

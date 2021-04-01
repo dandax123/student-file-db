@@ -4,8 +4,9 @@ from Helper import *
 def main():
     main_system = System()
     userAction = 0
+    shouldRun = True
     #adding a new user
-    while(True):
+    while(shouldRun):
         printMenu()
         userAction = int(input("Enter an option [1-6]: \n"))
         if(userAction == 1):
@@ -26,5 +27,9 @@ def main():
             main_system.get_student_by_birth_year(birth_year)
         elif(userAction == 6):
             main_system.display_all_students()
+        elif(userAction == 7):
+            main_system.write_students_content()
+            shouldRun = False
+        
 if __name__ == "__main__":
     main()

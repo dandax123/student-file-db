@@ -46,7 +46,9 @@ class Student(object):
         self.last_name = last_name
     def set_gender(self, gender):
         self.gender = gender 
-
+    def get_file_format(self):
+        file_format = f"{self.student_no}~{self.first_name}~{self.last_name}~{self.gender}~{self.date_of_birth}~{self.country_of_birth}"
+        return file_format
 
 # student1 = Student(18701850, "daniel", "test", "M", "12-07-2000", "ng")
 # print(student1.display_info())

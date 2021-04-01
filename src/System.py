@@ -5,7 +5,7 @@ from Helper import modify_operations
 class System:
     def __init__(self):
         self.students  = []
-        self.input_file = "test.txt"
+        self.input_file = "students.txt"
         self.file = File(self.input_file)
         self.students = self.file.read_contents()
         #this contains the list of all students 

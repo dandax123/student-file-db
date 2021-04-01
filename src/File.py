@@ -14,7 +14,7 @@ class File:
         f = open(self.file_name,'r',encoding = 'utf-8')
         for line in f:
             student_data = line.split("~")
-            if(len(student_data)):
+            if(len(student_data) > 1):
                 std_x = Student(int(student_data[0]), student_data[1], student_data[2], student_data[3], student_data[4], student_data[5])
                 students.append(std_x)
         f.close()

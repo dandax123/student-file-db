@@ -41,3 +41,4 @@ def printMenu():
     print("4. Find Student by No \n")
     print("5. Finds Students by Birth Year \n") 
     print("6. Display all Students \n")
+    print("7. Save and quit \n")

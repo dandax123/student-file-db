@@ -1,10 +1,14 @@
 from Student import Student
+from File import File
 from Helper import modify_operations
 
 class System:
-    def __init__(self, input_file = None):
-        #this contains the list of all students 
+    def __init__(self):
         self.students  = []
+        self.input_file = "test.txt"
+        self.file = File(self.input_file)
+        self.students = self.file.read_contents()
+        #this contains the list of all students 
     
     
     def get_student_by_birth_year(self, birth_year):
@@ -51,6 +55,12 @@ class System:
             print("Student added successfully\n\n")
     def display_all_students(self):
         self.display_students_info()
+    def write_students_content(self):
+        if(self.input_file==None):
+            print("No input file provided") 
+        else:
+            self.file.store_contents(self.students)
+            
     def display_students_info(self, students=None):
         print("Students Info")
         if(students):
